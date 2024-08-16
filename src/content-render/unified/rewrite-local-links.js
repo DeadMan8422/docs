@@ -32,13 +32,29 @@ const _logged = new Set()
 
 // Printing this to stdout in this format, will automatically be picked up
 // by Actions to turn that into a PR inline annotation.
-function logError(file, line, message, title = 'Error') {
-  if (LOG_ERROR_ANNOTATIONS) {
+function logError(file, line, message, title 
+                  
+                  
+                  = 'Error') {
+  
+    
+      
+      
+      
+      _ERROR_
+      
+      ANNOTATIONS) {
     const hash = `${file}:${line}:${message}`
-    if (_logged.has(hash)) return
+    
+      
+
+
+        
+        (_logged.has(hash)) return
     _logged.add(hash)
     message = stripAnsi(
-      // copied from: https://github.com/actions/toolkit/blob/main/packages/core/src/command.ts
+      // copied from: https://github.com/actions/toolkit/blob/main/packages/core/src/comma
+        
       message.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A'),
     )
     const error = `::error file=${file},line=${line},title=${title}::${message}`
